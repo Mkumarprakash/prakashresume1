@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css"rel="stylesheet">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+	<title>prakashportfolio</title>
+	<link rel="icon" type="image/png" href="img/pk.png" >
+	<style>
+	
+		html{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+ body{  background-color:#0e0f12 ;
+        margin: 0;
+        padding: 0px;
+        border: 20px;
+        display: flex;
+        	flex-wrap: wrap;
+    }
+.header{
+	flex-wrap: wrap;
+	 background-image: repeating-linear-gradient(136deg, black 7px, #7931a3 10px,green,  transparent 5px, transparent 14px) ;
+   animation: colorChange 5s infinite;
+    background-size: 30px;
+    background-repeat: repeat;
+}
+@keyframes colorChange {
+    0% { background-color: #FF5733; }
+    25% { background-color: #33FF57; }
+    50% { background-color: #5733FF; }
+    75% { background-color: #57FF33; }
+    100% { background-color: #3357FF; }
+}
+.row{
+	--bs-gutter-x: 0;
+	--bs-gutter-y: 0;
+}
+.list{
+	background-color: darkslategray;
+	position: fixed;
+	margin-top: 3px;
+	padding: 0px;
+	width: 100%;
+	z-index: 999;
+
+}
+.list ul li{
+	margin-top: 10px;
+	margin-left: 30px;
+	list-style:none;  
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 2px;
+}
+.list ul{
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+.list ul li:hover{
+	border-radius: 10px 0px 10px 0px;
+	
+	background-color: #03e9f4;
+	box-shadow:
+         0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 75px #03e9f4,
+        0 0 100px #03e9f4  ;
+}
+
+.icon-view1 a i{
+	border-radius: 70px;
+	 background-image: repeating-linear-gradient(30deg,blue 9px, white 10px,yellow,  transparent 0px, transparent 0px);
+	 font-size: 40px;
+	 padding:5px;
+	 margin: 5px;
+}
+	 
+	 
+	
+
+.icon-view1 a i:hover{
+	opacity: 0.7;
+}
+
+
+
+
+
+.flip-container {
+  perspective: 1000px;
+}
+.flip-icon {
+
+	
+  width: 350px;
+  height: 350px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  z-index: 1;
+}
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0px solid #ccc;
+  border-radius: 50px;
+ 
+  padding: 10px;
+  box-sizing: border-box;
+}
+.back {
+	margin-top: 20px;
+  transform: rotateY(180deg);
+  visibility: hidden;
+  opacity:0;
+  pointer-events: none; 
+  
+}
+.flip-container:hover .flip-icon {
+  transform: rotateY(180deg);
+}
+
+
+.flip-container:hover .back {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+ .container {
+      width: 400px;
+      height: 500px;
+      padding: 20px;
+      background-color: black;
+
+      margin: 0 auto;
+      border-radius: 20px;
+    }
+
+    input[type=text], select {
+      width: 100%;
+      height: 10px;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+    }
+
+
+    .slider-container {
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.slide {
+    width: 100%;
+    display: none;
+
+}
+.slide img {
+    width: 100%;
+}
+.slide embed {
+    width: 100%;
+}
+
+
+.active {
+    display: block;
+}
+
+
+.slide1{
+    margin-top: 0px;
+}
+.slider-1{
+	height: 400px;
+	width: 60%;
+    transform: translate(0%,0%);
+	background-image: url('img/internshipai.jpg');
+	background-size: 100% 100%;
+	border-radius: 20px 0px 20px 0px;
+	animation:myslide 30s infinite linear ;
+}
+
+@keyframes myslide {
+	0%{background-image: url('img/bharatintern.jpg');  }
+	25%{ background-image: url('img/wordpress.jpg'); }
+	55%{ background-image: url('img/training iit.jpg'); }
+	80%{ background-image: url('img/internshipai.jpg'); }
+
+
+}
+.slider-1:hover{
+	box-shadow: 0px 0px 15px 3px #03e9f4 ;
+}
+
+
+
+	</style>
+</head>
+<body>
+<div class="header">
+	<div class="row">
+  <div class="col-md-12">
+  	<div class="list">
+  <ul>
+  <li class="scrollButton" data-target="section1">1. ABOUT ME</li>
+  <li class="scrollButton" data-target="section2">2. Qualification</li>
+  <li class="scrollButton" data-target="section3">3. Training</li>
+  <li class="scrollButton" data-target="section4">4. Webinar</li>
+
+  <li class="scrollButton" data-target="section7">5. Contact</li>
+   </ul> 
+  </div>
+     </div>
+
+		    
+		    <div class="col-md-6 icon-view1" style=" background-color:#01101f; padding:50px
+		    0px 70px  70px; margin-top: 50px;  "> 
+      
+		    <div class="about-you"
+		    id="section1" style="margin: 0px 0px 0px 100px;background-color:#01101f;color: ghostwhite; background-size: 500px 500px ; text-align: cover;">
+		     
+		    <h2> Hello Folks,</h2> <h4>* This is <b
+		    style =" text-transform: uppercase;">prakash kumar mallick</b> from
+		    Bhadrak.<br>* I am a  front-end developer with HTML,CSS,JS 
+		    and also i have skill with artificial intelligence with machine
+		    learning.
+		    		<br>* Here i explaining my short-term goal is to  get a good job in IT industry and my long-term goal is to  to placed in a well reputated  Company
+		    		</h4>
+		    		<a href="https://instagram.com/arya_prakash_098?igshid=ZGUzMzM3NWJiOQ==" target="blank">
+
+		   <i  class="fab fa-instagram"  style="color:white; padding:4px 6px; "></i>
+		   </a>
+
+  <!-- Facebook Icon -->
+  <a href="https://www.facebook.com/prakashkumar.mallick.376" target="blank">
+  <i class="fab fa-facebook" style="color: blue; " ></i>
+  </a>
+
+  <!-- LinkedIn Icon -->
+  <a href="https://www.linkedin.com/in/prakash-kumar-mallick-83597a241" target="blank">
+  <i class="fab fa-linkedin" style="color: darkblue;" ></i>
+   </a>
+
+  <!-- Twitter Icon -->
+  <a href="https://twitter.com/mallick_pra955?t=ZER2-gLL1nypkWs8Ew9ifw&s=08" target="blank">
+  <i class="fab fa-twitter" style="color: skyblue;" ></i>
+  </a>
+
+  <!-- Pinterest Icon -->
+  <a href=" https://pin.it/7dNI9CE" target="blank">
+  <i class="fab fa-pinterest" style="color: red;"></i>
+  </a>
+		    	
+ 
+		    	</div>
+		    </div>
+			<div class="col-md-6" style=" background-color: #01101f; padding:100px 0px 200px  100px; margin-top: 50px; border-radius: 0px 0px 400px 0px; ">
+				
+          <div class="flip-container" >
+					  <div class="flip-icon">
+					    <div class="front">
+					     <img  class="proimg" src="my.jpg" style="width:400px; height: 400px; border-radius: 600px; margin: 10px 0px 0px 20px;  
+				box-shadow:
+         0  0 0px black,
+          0 0 5px black,
+        10px 20px 75px black,
+        20px 10px 100px black;
+         border: 8px double lightcyan; ">
+					    
+					    </div>
+					    <div class="back">  
+					      <iframe href="www.google.com" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1280.108577640733!2d86.79581077418942!3d21.211876644527734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDEyJzQwLjMiTiA4NsKwNDcnNDQuOSJF!5e1!3m2!1sen!2sin!4v1689521348639!5m2!1sen!2sin" width="400" height="400" style=" border-radius: 600px; box-shadow: 0  0 0px navajowhite,0 0 5px navajowhite,10px 20px 75px navajowhite,20px 10px 100px navajowhite;
+                border: 8px double lightcyan;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					    </div>
+					  </div> 
+					 </div>
+			</div>
+
+       
+
+
+        	 <div class="col-md-6" style="padding:70px 0px 70px  100px; background-color: #121010; border-radius: 0px 0px 00px 400px;">
+        	 	<div class="content" id="section2" style="margin: 200px 0px 0px 20px; color: navajowhite; ">
+        	 	<h5> *  i am persuing B. tech  4th year in <b> EINSTEIN ACADEMY OF TECHNOLOGY AND MANAGEMENT</b> , KHURDHA<br><br>
+        	                     *  I have completed  intermediate from <b> SAHEED MAHAVIDYALAYA BARAPUR</b>, Barapur securing <b>67%</b> in the final examination.<br><br>
+        	                      *  And also i have completed  matriculation from <b> S.S.Jew Nodal High School</b>,Bachhada securing <b>78%</b> . </h5> 
+        	                    </div>
+        	                  </div> 
+        	 <div class="col-md-6" style="padding:70px 0px 150px  100px; background-color: #121010;"> 
+        	 	<div class="content" style="margin: 150px 0px 0px 40px;">
+        	 		<i class="fas fa-graduation-cap" style="font-size:300px;padding: 0px 0px 60px 0px; "></i>  </div>
+        	 </div>
+        
+
+
+        	<div class="col-md-6" style="padding:0px 0px 100px  0px; background-color:black;"> 
+        		
+  <div class="slide1" id="section3" style="margin: 150px 0px 0px 150px;">
+	<div class="slider-1">	
+</div> 
+        
+  </div>
+        	</div>
+			<div class="col-md-6"  style="padding:50px 0px 200px  0px;background-color: black; border-radius: 0px 0px 400px 0px;">
+				<div  style="margin: 200px 0px 0px 0px;  color: navajowhite;">
+				   <h4>* I have done my training that Artificial intelligence with machinelearning from IIT Bombay through the edufabrica.
+			                       <br>*now i continuuing mytraining that fullstack web development from Udemy.<br>
+			                      *  i have also completed my  internship with AIML from IIT bombay and also wordpress web development from vedic guruji.<br>
+			                       * now i am continuing my internship with bharat intern .</h4> 
+                       </div>
+			                        </div>
+       
+
+
+        	<div class="col-md-6" style="padding:150px 20px 300px  100px; background-color:darkslategray; border-radius: 0px 0px 00px 400px; ">
+           <div id="section4" style="margin: 200px 0px 0px 50px; color: navajowhite;" >
+        		<h4> * We are 5 members in my family.<br>
+                *  My father who is a farmer and mother who is  homemaker and also we are 3 shiblings </h4>
+        	                      </div>
+        	                    </div>
+			<div class="col-md-6" style="padding:200px 0px 70px  100px; background-color:darkslategray ; ">
+	
+				<div class="slider-container">
+        <div class="slide">
+            <embed src="img/virtual workshop.pdf" type="application/pdf" style="height:450px; width: 400px; " >
+        </div>
+        <div class="slide">
+           <embed src="img/webinar pv.pdf" type="application/pdf" style="height:450px; width: 400px; " >
+        </div>
+        <div class="slide">
+           <embed src="img/workshop certificate .pdf" type="application/pdf" style="height:400px; width: 400px; " >  
+        </div>
+        <div class="slide">
+            <embed src="img/ethical workshop.pdf" type="application/pdf" style="height:450px; width: 400px; " > 
+        </div>
+        <div class="slide">
+            <img src="img/webinar_xlnc.png" type="application/pdf" style="height:450px; width: 400px; " >  
+        </div>
+    </div>
+				</div>
+      
+
+        	<div class="col-md-6" style="padding:70px 0px 150px  100px;background-color:#070a0d; display: none; ">
+        		<div id="section5"  style="margin: 100px 0px 0px 50px;">
+              <i class="fas fa-flask" style="font-size: 350px;"  ></i>
+        		</div></div>
+			<div class="col-md-6" style="padding:70px 20px 150px  0px; background-color:#070a0d; border-radius: 0px 0px 400px 0px; display: none;">
+				<div  style="margin: 200px 0px 0px 0px; color:navajowhite;">
+				<h4></h4>
+			</div>
+			</div>
+       
+
+
+        	<div class="col-md-6" style="padding:70px 20px 300px  100px; background-color:darkslategray ; border-radius: 00px 0px 0px 400px; display: none;"> 
+        		<div id="section6" style="margin: 200px 0px 0px 50px;" >
+        			<h4>*  My hobies are  to play badminton , chess, vollyball
+        	                       and also  listening music</h4></div>
+        	                        </div>
+			<div class="col-md-6" style="padding:70px 0px 70px  100px; background-color:darkslategray ; display: none;">
+				<div style="margin: 200px 0px 0px 50px;"> pics</div></div>
+
+
+
+
+
+       <section  id="section7" style="padding:200px 20px 100px  00px ; background-color:darkkhaki;" >
+       	<div class="container">
+    <form id="myForm" onsubmit="sendEmail(); reset(); return false  ">
+      <label for="name">Name :</label>
+      <input type="text" id="name" name="name" placeholder="Your name">
+
+      <label for="email">Email :</label>
+      <input type="text" id="email" name="email" placeholder="Your email">
+      <label for="phone">phone :</label>
+      <input type="text" id="phone" name="phone" placeholder="Phone number">
+      <label for="query">Query :</label>
+      <input type="text" id="query" name="query" placeholder="Put your Question . . . . . . . . " style="padding:10px 30px 100px 10px " >
+
+
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+       
+      
+
+        
+     <center style="color:lightsteelblue ;"> @copyright2023.prakashkumarmallick</center>
+	</div>
+</div>
+
+
+
+</body>
+<script >
+	document.addEventListener("DOMContentLoaded", () => {
+  const scrollButtons = document.querySelectorAll(".scrollButton");
+
+  scrollButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const targetId = button.getAttribute("data-target");
+      const targetElement = document.getElementById(targetId);
+
+      // Perform a smooth scroll to the target element, positioning it in the middle of the page
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "center", // Scroll to the vertical center of the element
+        inline: "nearest", // Scroll to the nearest edge of the element
+      });
+    });
+  });
+});
+
+
+
+
+
+
+
+
+	// JavaScript code for the slider
+let slideIndex = 0;
+let slideInterval;
+showSlides();
+
+function showSlides() {
+    const slides = document.getElementsByClassName("slide");
+    
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+  } 
+function startSlider() {
+    slideInterval = setInterval(showSlides, 3000); // Change slide every 2 seconds (adjust as needed)
+}
+
+function pauseSlider() {
+    clearInterval(slideInterval);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    startSlider();
+    const sliderContainer = document.querySelector(".slider-container");
+    sliderContainer.addEventListener("mouseenter", pauseSlider);
+    sliderContainer.addEventListener("mouseleave", startSlider);
+});
+
+
+
+
+ document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+    alert( "Don't worry keep patience. I will contact you soon . . . . . . " )
+      // Retrieve form data
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+       var query = document.getElementById("query").value;
+
+      // Create a new FormData object and populate it with the form data
+      var formData = new FormData();
+      formData.append("name", name);
+      formData.append("email", email);
+      formData.append("phone", phone);
+      formData.append("query", query);
+
+      // Send the form data to the server using XMLHttpRequest or fetch API
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "send_email.php", true);
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          // Handle the server response if needed
+          console.log(xhr.responseText);
+        }
+      };
+      xhr.send(formData);
+    });
+
+function sendEmail(){
+
+	Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "mkumarprakash70306@gmail.com",
+    Password : "669DCA37ECE4D19D9122E07181C0AD60F2A1",
+    To : 'mpkmallick@gmail.com',
+    From : "mkumarprakash70306@gmail.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+}
+
+
+</script>
+
+</html>
+<li class="scrollButton" data-target="section5">5. Course & certification</li>
+  <li class="scrollButton" data-target="section6">6. reference</li>
