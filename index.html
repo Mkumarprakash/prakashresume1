@@ -43,7 +43,7 @@
 	--bs-gutter-y: 0;
 }
 .list{
-	background-color: darkslategray;
+	background-color: black ;
 	position: fixed;
 	margin-top: 3px;
 	padding: 0px;
@@ -79,7 +79,7 @@
 .icon-view1 a i{
 	border-radius: 70px;
 	 background-image: repeating-linear-gradient(30deg,blue 9px, white 10px,yellow,  transparent 0px, transparent 0px);
-	 font-size: 40px;
+	 font-size: 40px; 
 	 padding:5px;
 	 margin: 5px;
 }
@@ -144,10 +144,11 @@
       width: 400px;
       height: 500px;
       padding: 20px;
-      background-color: black;
-
+      background-color: transparent;
+      backdrop-filter: blur(10px);
       margin: 0 auto;
       border-radius: 20px;
+      border: 1px;
     }
 
     input[type=text], select {
@@ -219,6 +220,18 @@
 .slider-1:hover{
 	box-shadow: 0px 0px 15px 3px #03e9f4 ;
 }
+section{
+    background: url('bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: animatebg 5s linear infinite;
+
+}
+@keyframes animatebg{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+
 
 
 
@@ -234,7 +247,7 @@
   <li class="scrollButton" data-target="section2">2. Qualification</li>
   <li class="scrollButton" data-target="section3">3. Training</li>
   <li class="scrollButton" data-target="section4">4. Webinar</li>
-
+  
   <li class="scrollButton" data-target="section7">5. Contact</li>
    </ul> 
   </div>
@@ -245,7 +258,7 @@
 		    0px 70px  70px; margin-top: 0px;  "> 
       
 		    <div class="about-you"
-		    id="section1" style="margin: 100px 0px 0px  0px;background-color:#01101f;color: ghostwhite; background-size: 500px 500px ; text-align: left; padding: 30px;">
+		    id="section1" style="margin: 100px 0px 0px  0px;background-color:#01101f;color: ghostwhite; background-size: 500px 500px ; text-align: left; padding: 0px;">
 		     
 		    <h2> Hello Folks,</h2> <h4>* This is <b
 		    style =" text-transform: uppercase;">prakash kumar mallick</b> from
@@ -282,7 +295,7 @@
  
 		    	</div>
 		    </div>
-			<div class="col-md-6" style=" background-color: #01101f; padding:150px 0px 200px  50px; margin-top: 0px; border-radius: 0px 0px 400px 0px;   justify-content: center;  ">
+			<div class="col-md-6" style=" background-color: #01101f; padding:150px 0px 200px  50px; margin-top: 0px; border-radius: 0px 0px 0px 0px;   justify-content: center;  ">
 				
           <div class="flip-container" >
 					  <div class="flip-icon">
@@ -307,7 +320,7 @@
        
 
 
-        	 <div class="col-md-6" style="padding:50px 0px 50px  50px; background-color: #121010; border-radius: 0px 0px 0px 400px;">
+        	 <div class="col-md-6" style="padding:50px 0px 50px  50px; background-color: #121010; border-radius: 0px 0px 0px 0px;">
         	 	<div class="content" id="section2" style="margin: 100px 0px 50px 20px; color: navajowhite;  padding: 40px;">
         	 	<h5> *  i am persuing B. tech  4th year in <b> EINSTEIN ACADEMY OF TECHNOLOGY AND MANAGEMENT</b> , KHURDHA<br><br>
         	                     *  I have completed  intermediate from <b> SAHEED MAHAVIDYALAYA BARAPUR</b>, Barapur securing <b>67%</b> in the final examination.<br><br>
@@ -329,7 +342,7 @@
         
   </div>
         	</div>
-			<div class="col-md-6"  style="padding:50px 0px 100px  0px;background-color: black; border-radius: 0px 0px 400px 0px;">
+			<div class="col-md-6"  style="padding:50px 0px 100px  0px;background-color: black; border-radius: 0px 0px 0px 0px;">
 				<div  style="margin: 50px 0px 100px 0px;  color: navajowhite; padding: 50px;">
 				   <h4>* I have done my training that Artificial intelligence with machinelearning from IIT Bombay through the edufabrica.
 			                       <br>*now i continuuing mytraining that fullstack web development from Udemy.<br>
@@ -340,9 +353,9 @@
        
 
 
-        	<div class="col-md-6" style="padding:200px 20px 200px  50px; background-color:darkslategray; border-radius: 0px 0px 00px 400px; ">
+        	<div class="col-md-6" style="padding:200px 20px 200px  50px; background-color:darkslategray; border-radius: 0px 0px 00px 0px; ">
            <div id="section4" style="margin: 100px 0px 100px 30px; color: navajowhite;" >
-        		<h4> * i am attend the webinar form xlnc , tecnble , sky ridder , IIt bhubaneswar  and nikshit media pvt. ltd.<br>
+        		<h4> * i am attend the webinar form xlnc , tecnble , sky ridder , IIT bhubaneswar  and nikshit media pvt. ltd.<br>
                  </h4>
         	                      </div>
         	                    </div>
@@ -380,7 +393,7 @@
        
 
 
-        	<div class="col-md-6" style="padding:70px 20px 300px  100px; background-color:darkslategray ; border-radius: 00px 0px 0px 400px; display: none;"> 
+        	<div class="col-md-6" style="padding:70px 20px 300px  100px; background-color:darkslategray ; border-radius: 00px 0px 0px 0px; display: none;"> 
         		<div id="section6" style="margin: 200px 0px 0px 50px;" >
         			<h4>*  My hobies are  to play badminton , chess, vollyball
         	                       and also  listening music</h4></div>
@@ -392,7 +405,7 @@
 
 
 
-       <section  id="section7" style="padding:200px 20px 100px  00px ; background-color:darkkhaki;" >
+       <section  id="section7" style="padding:200px 20px 100px  00px ; background-color:transparent;" >
        	<div class="container">
     <form id="myForm" onsubmit="sendEmail(); reset(); return false  ">
       <label for="name">Name :</label>
@@ -531,5 +544,3 @@ function sendEmail(){
 </script>
 
 </html>
-<li class="scrollButton" data-target="section5">5. Course & certification</li>
-  <li class="scrollButton" data-target="section6">6. reference</li>
